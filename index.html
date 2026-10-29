@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi Eskul Coding - YazidDev</title>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome untuk Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --card-hover: #334155;
+            --accent-primary: #38bdf8;
+            --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --radius: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        /* Header Styles */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header .badge {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-primary);
+            padding: 6px 14px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* Meeting List Container */
+        .meeting-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        /* Card Item */
+        .meeting-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .meeting-card:hover {
+            transform: translateY(-2px);
+            background-color: var(--card-hover);
+            border-color: rgba(56, 189, 248, 0.3);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+        }
+
+        .meeting-info {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .meeting-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .meeting-details h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 4px;
+        }
+
+        .meeting-details p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Action Button */
+        .btn-drive {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent-gradient);
+            color: #0f172a;
+            padding: 10px 18px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .btn-drive:hover {
+            opacity: 0.9;
+            transform: scale(1.02);
+        }
+
+        /* Footer Notes */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .meeting-card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+            .btn-drive {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="badge"><i class="fa-solid fa-code"></i> Ekstrakurikuler Coding</div>
+            <h1>Materi & Modul Pembelajaran</h1>
+            <p>Silakan akses materi Google Drive sesuai jadwal pertemuan masing-masing.</p>
+        </header>
+
+        <!-- List Pertemuan (Bisa ditambah atau dikurangi sesuai kebutuhan) -->
+        <div class="meeting-list">
+
+            <!-- Pertemuan 1 -->
+            <div class="meeting-card">
+                <div class="meeting-info">
+                    <div class="meeting-icon">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <div class="meeting-details">
+                        <h3>Game Tangkap Apple before waktu</h3>
+                        <p>Materi, slide presentasi, dan latihan praktik awal.</p>
+                    </div>
+                </div>
+                <!-- Ubah atribut href="#" dengan link Google Drive kamu -->
+                <a href="https://drive.google.com/file/d/1MT6oEMTynzraNSlE9Ta4hygCDZhHlKaD/view?usp=sharing" target="_blank" class="btn-drive">
+                    <i class="fa-brands fa-google-drive"></i> Buka Materi
+                </a>
+            </div>
+
+            <div class="meeting-card">
+                <div class="meeting-info">
+                    <div class="meeting-icon">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <div class="meeting-details">
+                        <h3>Game Tangkap Apple done</h3>
+                        <p>Materi, slide presentasi, dan latihan praktik awal.</p>
+                    </div>
+                </div>
+                <!-- Ubah atribut href="#" dengan link Google Drive kamu -->
+                <a href="https://drive.google.com/file/d/1w4pSWINYMHDZ0lPNUT3jn81UqsAq30xU/view?usp=drive_link" target="_blank" class="btn-drive">
+                    <i class="fa-brands fa-google-drive"></i> Buka Materi
+                </a>
+            </div>
+
+
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 Eskul Coding. Siap dibagikan ke murid-murid.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
