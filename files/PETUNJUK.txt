@@ -1,0 +1,11 @@
+SIMPAN FILE MATERI DI FOLDER INI
+
+Pertemuan 1:
+- game-tangkap-apple.pdf
+
+Pertemuan 2:
+- game-tangkap-apple-lanjutan.pdf
+
+Nama file harus sama persis dengan yang tertulis pada atribut href di index.html.
+Kamu boleh menggunakan PDF, PPTX, DOCX, ZIP, atau format file lain.
+Jika nama file diubah, sesuaikan juga alamat href pada tombol Download File.

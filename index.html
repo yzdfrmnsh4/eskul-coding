@@ -155,6 +155,50 @@
             transform: scale(1.02);
         }
 
+
+        /* Download Button */
+        .card-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: rgba(56, 189, 248, 0.10);
+            color: var(--accent-primary);
+            border: 1px solid rgba(56, 189, 248, 0.28);
+            padding: 10px 18px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: background 0.2s ease, transform 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .btn-download:hover {
+            background: rgba(56, 189, 248, 0.18);
+            transform: scale(1.02);
+        }
+
+        @media (max-width: 640px) {
+            .card-actions {
+                width: 100%;
+                flex-direction: column;
+            }
+
+            .card-actions .btn-drive,
+            .card-actions .btn-download {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
         /* Footer Notes */
         footer {
             text-align: center;
@@ -202,9 +246,15 @@
                     </div>
                 </div>
                 <!-- Ubah atribut href="#" dengan link Google Drive kamu -->
-                <a href="https://drive.google.com/file/d/1MT6oEMTynzraNSlE9Ta4hygCDZhHlKaD/view?usp=sharing" target="_blank" class="btn-drive">
-                    <i class="fa-brands fa-google-drive"></i> Buka Materi
-                </a>
+                <div class="card-actions">
+                    <a href="https://drive.google.com/file/d/1MT6oEMTynzraNSlE9Ta4hygCDZhHlKaD/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-drive">
+                        <i class="fa-brands fa-google-drive"></i> Buka Materi
+                    </a>
+                    <!-- Letakkan file materi pertama di folder files/ dengan nama game-tangkap-apple.pdf -->
+                    <a href="files/game-tangkap-apple.pdf" download class="btn-download">
+                        <i class="fa-solid fa-download"></i> Download File
+                    </a>
+                </div>
             </div>
 
             <div class="meeting-card">
@@ -218,11 +268,66 @@
                     </div>
                 </div>
                 <!-- Ubah atribut href="#" dengan link Google Drive kamu -->
-                <a href="https://drive.google.com/file/d/1w4pSWINYMHDZ0lPNUT3jn81UqsAq30xU/view?usp=drive_link" target="_blank" class="btn-drive">
-                    <i class="fa-brands fa-google-drive"></i> Buka Materi
-                </a>
+                <div class="card-actions">
+                    <a href="https://drive.google.com/file/d/1w4pSWINYMHDZ0lPNUT3jn81UqsAq30xU/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-drive">
+                        <i class="fa-brands fa-google-drive"></i> Buka Materi
+                    </a>
+                    <!-- Letakkan file materi kedua di folder files/ dengan nama game-tangkap-apple-lanjutan.pdf -->
+                    <a href="files/game-tangkap-apple-lanjutan.pdf" download class="btn-download">
+                        <i class="fa-solid fa-download"></i> Download File
+                    </a>
+                </div>
+
+                
             </div>
 
+                        <div class="meeting-card">
+                <div class="meeting-info">
+                    <div class="meeting-icon">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <div class="meeting-details">
+                        <h3>Game Tembak Balon 50 persen</h3>
+                        <p>Materi, slide presentasi, dan latihan praktik awal.</p>
+                    </div>
+                </div>
+                <!-- Ubah atribut href="#" dengan link Google Drive kamu -->
+                <div class="card-actions">
+                    <a href="https://drive.google.com/file/d/1vhXRtUHL9uQ2QwOGCpzvijeqgrrc5hSY/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-drive">
+                        <i class="fa-brands fa-google-drive"></i> Buka Materi
+                    </a>
+                    <!-- Letakkan file materi kedua di folder files/ dengan nama game-tangkap-apple-lanjutan.pdf -->
+                    <a href="files/tembakbalon60.sb3" download class="btn-download">
+                        <i class="fa-solid fa-download"></i> Download File
+                    </a>
+                </div>
+
+                
+            </div>
+
+                                    <div class="meeting-card">
+                <div class="meeting-info">
+                    <div class="meeting-icon">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <div class="meeting-details">
+                        <h3>Game Tembak Balon 100 persen</h3>
+                        <p>Materi, slide presentasi, dan latihan praktik awal.</p>
+                    </div>
+                </div>
+                <!-- Ubah atribut href="#" dengan link Google Drive kamu -->
+                <div class="card-actions">
+                    <a href="https://drive.google.com/file/d/1wnvf1xT3yy3fCt7zpJ90aWi7euhhZ_lx/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-drive">
+                        <i class="fa-brands fa-google-drive"></i> Buka Materi
+                    </a>
+                    <!-- Letakkan file materi kedua di folder files/ dengan nama game-tangkap-apple-lanjutan.pdf -->
+                    <a href="files/shootingball.sb3" download class="btn-download">
+                        <i class="fa-solid fa-download"></i> Download File
+                    </a>
+                </div>
+
+                
+            </div>
 
         </div>
 
